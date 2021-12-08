@@ -4,7 +4,6 @@ var checkButton = document.querySelector("#checkButton");
 var output = document.querySelector("#output");
 
 function clickEventHandler() {
-   //hideMessage();
     var birthDate = dob.value
     var lc = luckyNumber.value
     var cSum = calculateSum(birthDate)
@@ -12,7 +11,7 @@ function clickEventHandler() {
 }
 
 function calculateSum(birthDate) {
-    //hideMessage();
+    
     var birthDate = birthDate.replaceAll("-", "")
     var sum = 0;
     for (var i=0 ; i<birthDate.length ; i++) {
@@ -22,7 +21,6 @@ return sum;
 }
 
 function compareValues(cSum,lc) {
-    hideMessage();
     if (cSum % lc === 0){
     output.innerText="you are lucky";
 } else {
@@ -30,9 +28,9 @@ function compareValues(cSum,lc) {
 }
 }
 
-function hideMessage() {
-    message.style.display = "none";
-  }
+//function hideMessage() {
+   // message.style.display = "none";
+  //}
   
 
 
