@@ -19,20 +19,14 @@ function clickEventHandler() {
     var birthDate = dob.value
     var lc = luckyNumber.value
     var cSum = calculateSum(birthDate)
-    if (cSum % lc === 0){
-        output.innerText="you are lucky";
+    if (dob % luckyNumber === 0){
+        output.innerText="your birthday is lucky";
     } else {
-        output.nnerText="you are unlucky";
+        output.innerText="your birthday is unlucky";
     }
 }
 
-
-
-
-//function hideMessage() {
-   // message.style.display = "none";
-  //}
-  
-
-
 checkButton.addEventListener("click",clickEventHandler);
+
+
+
