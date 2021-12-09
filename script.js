@@ -3,12 +3,7 @@ var luckyNumber = document.querySelector("#luckyNumber");
 var checkButton = document.querySelector("#checkButton");
 var output = document.querySelector("#output");
 
-function clickEventHandler() {
-    var birthDate = dob.value
-    var lc = luckyNumber.value
-    var cSum = calculateSum(birthDate)
-    compareValues(cSum , lc)
-}
+
 
 function calculateSum(birthDate) {
     
@@ -20,13 +15,19 @@ function calculateSum(birthDate) {
 return sum;
 }
 
-function compareValues(cSum,lc) {
+function clickEventHandler() {
+    var birthDate = dob.value
+    var lc = luckyNumber.value
+    var cSum = calculateSum(birthDate)
     if (cSum % lc === 0){
-    output.innerText="you are lucky";
-} else {
-    output.nnerText="you are unlucky";
+        output.innerText="you are lucky";
+    } else {
+        output.nnerText="you are unlucky";
+    }
 }
-}
+
+
+
 
 //function hideMessage() {
    // message.style.display = "none";
