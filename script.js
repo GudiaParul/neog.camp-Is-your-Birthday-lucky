@@ -10,16 +10,16 @@ function calculateSum(birthDate) {
     var birthDate = birthDate.replaceAll("-", "")
     var sum = 0;
     for (var i=0 ; i<birthDate.length ; i++) {
-    sum = sum + Number(birthDate.charAt[i]);
-}
-return sum;
+        sum = sum + Number(birthDate[i]);
+    }
+    return sum;
 }
 
 function clickEventHandler() {
-    var birthDate = dob.value
-    var lc = luckyNumber.value
+    var birthDate = dob.value;
+    var lc = luckyNumber.value;
     var cSum = calculateSum(birthDate)
-    if (dob % luckyNumber === 0){
+    if (cSum % lc === 0){
         output.innerText="your birthday is lucky";
     } else {
         output.innerText="your birthday is unlucky";
